@@ -3,6 +3,7 @@ package aplicationEnumComposicao;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 import enititiesEnumComposicao.Client;
@@ -14,6 +15,8 @@ import enititiesEnumComposicao.enums.OrderStatus;
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
+		
+		Locale.setDefault(Locale.US);
 	
 		Scanner sc = new Scanner(System.in);
 		//SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");

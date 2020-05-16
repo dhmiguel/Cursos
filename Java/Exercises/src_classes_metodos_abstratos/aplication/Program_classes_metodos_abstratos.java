@@ -15,10 +15,9 @@ import entities.TaxPayer;
 public class Program_classes_metodos_abstratos {
 
 	public static void main(String[] args) {
-		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Locale.setDefault(Locale.US);
 		
 		List<TaxPayer> list = new ArrayList<>();
 		
@@ -26,7 +25,7 @@ public class Program_classes_metodos_abstratos {
 		int n = sc.nextInt();
 		
 		for(int i = 1; i<=n; i++) {
-			System.out.print("Individual or company (i/c)?");
+			System.out.print("Individual or company (i/c)? ");
 			char res = sc.next().charAt(0);
 			sc.nextLine();
 			System.out.print("Name: ");
@@ -44,15 +43,14 @@ public class Program_classes_metodos_abstratos {
 				list.add(new Company(name, anualIncome, numberOfEmployees));
 			}
 		}
-		
+		double sum = 0;
 		System.out.println();
 		System.out.println("Taxes Paid: ");
 		for(TaxPayer tp : list) {
-			System.out.println(tp.getName() + ": $ " + tp.tax());
-			
-			
+			System.out.println(tp.getName() + ": $ " + String.format("%.2f", tp.tax()));
+			sum += tp.tax();
 		}
-		
+		System.out.println("Sum of taxes: " + sum);
 		
 		
 		sc.close();

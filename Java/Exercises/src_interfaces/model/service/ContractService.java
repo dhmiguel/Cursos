@@ -20,7 +20,7 @@ public class ContractService {
 			Double p1 =  onlinePaymentService.interest(amount, i);
 			Double p2 =  onlinePaymentService.paymentFee(amount + p1);
 			Double result = amount + p1 + p2;
-			c.add(Calendar.DAY_OF_MONTH ,+31);
+			c.add(Calendar.MONTH , 1);
 	
 			contract.getIntallments().add(new Installment(c.getTime(), result));
 		}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro | PWE</title>
+<script type ="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<form method="post" action="enviarEmail.jsp">
+
+		Digite o email: <input type="text" name="email" id="email"><br>
+		<br> Digite o CPF: <input type="text" name="cpf" id="cpf"><br>
+		<br>
+	
+		<!--  Digite o nome: <input type="text" name="nome" id="nome"><br><br>
+		
+		Digite o endereco: <input type="text" name="endereco" id="endereco"><br><br>
+		
+		Digite o bairro: <input type="text" name="bairro" id="bairro"><br><br>
+		
+		Digite o cidade: <input type="text" name="cidade" id="cidade"><br><br>
+		
+		Digite o uf: <input type="text" name="uf" id="uf"><br><br>
+		
+		Digite o cep: <input type="text" name="cep" id="cep"><br><br>
+		
+		Digite o telefone: <input type="text" name="telefone" id="telefone"><br><br>
+		
+		Digite o foto: <input type="text" name="foto" id="foto"><br><br>
+		
+		Digite o ativo: <input type="text" name="ativo" id="ativo"><br><br>
+
+		-->
+
+
+		<button id="btnCadastro">Enviar</button>
+
+
+	</form>
+
+	<script>
+		$("btnCadastro").click(function() {
+			$.post("enviarEmail.jsp", function(data, status) {
+				alert("\nStatus: " + status);
+			});
+		});
+	</script>
+
+</body>
+</html>
